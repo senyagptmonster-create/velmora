@@ -1,28 +1,39 @@
 import 'package:flutter/material.dart';
 
 class VelmoraTheme {
-  static const Color calmingSage = Color(0xFF5B8266);
-  static const Color softLavender = Color(0xFF8E9AAF);
-  static const Color warmCream = Color(0xFFFBFBF2);
-  static const Color darkSlate = Color(0xFF264653);
-  static const Color cardOutline = Color(0xFFE5E7EB);
+  static const bg = Color(0xFFFAF5FF);
+  static const surface = Color(0xFFFFFFFF);
+  static const edge = Color(0xFFE9D5FF);
+  static const accent = Color(0xFF9333EA);
+  static const accentLight = Color(0xFFC084FC);
+  static const ink = Color(0xFF3B0764);
+  static const muted = Color(0xFF6B21A8);
 
-  static ThemeData get lightTheme {
+  static ThemeData get themeData {
     return ThemeData(
-      useMaterial3: true,
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: bg,
       fontFamily: 'AppFont',
-      scaffoldBackgroundColor: warmCream,
+      primaryColor: accent,
       colorScheme: const ColorScheme.light(
-        primary: calmingSage,
-        secondary: softLavender,
-        surface: Colors.white,
-        onPrimary: Colors.white,
-        onSurface: darkSlate,
+        primary: accent,
+        surface: surface,
       ),
       appBarTheme: const AppBarTheme(
-        backgroundColor: calmingSage,
-        foregroundColor: Colors.white,
+        backgroundColor: bg,
         elevation: 0,
+        foregroundColor: ink,
+      ),
+      drawerTheme: const DrawerThemeData(
+        backgroundColor: surface,
+      ),
+      cardTheme: CardThemeData(
+        color: surface,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: const BorderSide(color: edge, width: 1.5),
+        ),
       ),
     );
   }

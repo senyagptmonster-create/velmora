@@ -14,7 +14,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "app.velmora.stretch.break"
+    namespace = "app.velmora.stretchbreak"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 

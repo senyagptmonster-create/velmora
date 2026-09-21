@@ -6,7 +6,7 @@
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
-            android:name="app.velmora.stretch.break.MainActivity"
+            android:name="app.velmora.stretchbreak.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
